@@ -2,9 +2,19 @@ package com.afs.tdd;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class DemoTest {
     @Test
-    void write_your_first_test() {
+    void should_move_when_executeCommand_given_M_and_direction_is_N() {
+        Location ExpectedLocation = new Location(0,1,"N");
+        //Given
+        Location location = new Location(0,0,"N");
+        MarRover marRover = new MarRover(location);
+        //When
+        Location currentLocation = marRover.executeCommand("M");
+        //Then
+        assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
 
     }
 }
