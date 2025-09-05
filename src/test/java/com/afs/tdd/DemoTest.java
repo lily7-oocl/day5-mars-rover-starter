@@ -126,4 +126,15 @@ class DemoTest {
         //Then
         assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
     }
+    @Test
+    void should_move_when_executeCommand_given_R_and_direction_is_W() {
+        Location ExpectedLocation = new Location(0,0,"N");
+        //Given
+        Location location = new Location(0,0,"W");
+        MarRover marRover = new MarRover(location);
+        //When
+        Location currentLocation = marRover.executeCommand("M");
+        //Then
+        assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
+    }
 }
