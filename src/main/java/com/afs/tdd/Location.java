@@ -9,10 +9,6 @@ public class Location {
         this.locationY = locationY;
         this.direction = direction;
     }
-    public String respondLocation(){
-        return this.locationX+":"+this.locationY+":"+this.direction;
-    }
-
     public int getLocationX() {
         return locationX;
     }
@@ -35,5 +31,21 @@ public class Location {
 
     public void setDirection(String direction) {
         this.direction = direction;
+    }
+
+    public String respondLocation(){
+        return this.locationX+":"+this.locationY+":"+this.direction;
+    }
+    public void increaseLocationX(){
+        this.locationX++;
+    }
+    public void increaseLocationY(){
+        this.locationY++;
+    }
+    public void decreaseLocationX(){
+        this.locationX--;
+    }
+    public void decreaseLocationY(){
+        this.locationY--;
     }
 }
