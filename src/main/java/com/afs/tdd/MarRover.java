@@ -15,6 +15,7 @@ public class MarRover {
                     break;
                 case 'B':
                     back();
+                    break;
                 case 'R':
                     turnRight();
                     break;
