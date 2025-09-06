@@ -1,9 +1,14 @@
 package com.afs.tdd;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Location {
     private int locationX;
     private int locationY;
     private String direction;
+    private final List<String> directions = Arrays.asList("N", "E", "S", "W");
     Location(int locationX, int locationY, String direction) {
         this.locationX = locationX;
         this.locationY = locationY;
@@ -47,5 +52,11 @@ public class Location {
     }
     public void decreaseLocationY(){
         this.locationY--;
+    }
+    public void turnLeft(){
+        this.direction = directions.get((directions.indexOf(this.direction)-1+4)%directions.size());
+    }
+    public void turnRight(){
+        this.direction = directions.get((directions.indexOf(this.direction)+1)%directions.size());
     }
 }
