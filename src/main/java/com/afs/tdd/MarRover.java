@@ -29,16 +29,16 @@ public class MarRover {
 
     public void move() {
         switch (location.getDirection()) {
-            case "N":
+            case NORTH:
                 location.increaseLocationY();
                 break;
-            case "E":
+            case EAST:
                 location.increaseLocationX();
                 break;
-            case "S":
+            case SOUTH:
                 location.decreaseLocationY();
                 break;
-            case "W":
+            case WEST:
                 location.decreaseLocationX();
                 break;
         }
@@ -46,27 +46,27 @@ public class MarRover {
 
     public void back() {
         switch (location.getDirection()) {
-            case "N":
+            case NORTH:
                 location.decreaseLocationY();
                 break;
-            case "E":
+            case EAST:
                 location.decreaseLocationX();
                 break;
-            case "S":
+            case SOUTH:
                 location.increaseLocationY();
                 break;
-            case "W":
+            case WEST:
                 location.increaseLocationX();
                 break;
         }
     }
 
     public void turnLeft() {
-        location.turnLeft();
+        location.getDirection().turnLeft();
     }
 
     public void turnRight() {
-        location.turnRight();
+        location.getDirection().turnRight();
     }
 
     public Location getLocation() {
