@@ -7,9 +7,8 @@ import java.util.List;
 public class Location {
     private int locationX;
     private int locationY;
-    private String direction;
-    private final List<String> directions = Arrays.asList("N", "E", "S", "W");
-    Location(int locationX, int locationY, String direction) {
+    private Direction direction;
+    Location(int locationX, int locationY, Direction direction) {
         this.locationX = locationX;
         this.locationY = locationY;
         this.direction = direction;
@@ -30,16 +29,16 @@ public class Location {
         this.locationY = locationY;
     }
 
-    public String getDirection() {
+    public Direction getDirection() {
         return direction;
     }
 
-    public void setDirection(String direction) {
+    public void setDirection(Direction direction) {
         this.direction = direction;
     }
 
     public String respondLocation(){
-        return this.locationX+":"+this.locationY+":"+this.direction;
+        return this.locationX+":"+this.locationY+":"+this.direction.getDirection();
     }
     public void increaseLocationX(){
         this.locationX++;
@@ -52,11 +51,5 @@ public class Location {
     }
     public void decreaseLocationY(){
         this.locationY--;
-    }
-    public void turnLeft(){
-        this.direction = directions.get((directions.indexOf(this.direction)-1+4)%directions.size());
-    }
-    public void turnRight(){
-        this.direction = directions.get((directions.indexOf(this.direction)+1)%directions.size());
     }
 }
