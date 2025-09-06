@@ -25,7 +25,7 @@ class MarRoverTest {
         //When
         String currentLocation = marRover.executeCommand("M");
         //Then
-        assertEquals(currentLocation,ExpectedLocation.respondLocation());
+        assertEquals(currentLocation,ExpectedLocation.respondLocation());out
     }
     @Test
     public void should_move_when_executeCommand_given_M_and_direction_is_S() {
