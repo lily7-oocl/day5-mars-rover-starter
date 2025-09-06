@@ -8,34 +8,64 @@ public class MarRover {
     }
 
     public String executeCommand(String command) {
+        for (Character singleCommand:command.toCharArray()){
+            switch (singleCommand) {
+                case 'M':
+                    move();
+                    break;
+                case 'B':
+                    back();
+                case 'R':
+                    turnRight();
+                    break;
+                case 'L':
+                    turnLeft();
+                    break;
+            }
+        }
+        return location.respondLocation();
+    }
 
-        switch (command) {
-            case "M":
-                move(command);
-            break;
-            case "B":
-                back(command);
-            case "R":
-                turnRight(command);
+    public void move() {
+        switch (location.getDirection()) {
+            case "N":
+                location.increaseLocationY();
                 break;
-            case "L":
-                turnLeft(command);
+            case "E":
+                location.increaseLocationX();
+                break;
+            case "S":
+                location.decreaseLocationY();
+                break;
+            case "W":
+                location.decreaseLocationX();
                 break;
         }
-        return null;
-
     }
 
-    public void move(String command) {
+    public void back() {
+        switch (location.getDirection()) {
+            case "N":
+                location.decreaseLocationY();
+                break;
+            case "E":
+                location.decreaseLocationX();
+                break;
+            case "S":
+                location.increaseLocationY();
+                break;
+            case "W":
+                location.increaseLocationX();
+                break;
+        }
     }
 
-    public void back(String command) {
+    public void turnLeft() {
+        location.turnLeft();
     }
 
-    public void turnLeft(String command) {
-    }
-
-    public void turnRight(String command) {
+    public void turnRight() {
+        location.turnRight();
     }
 
     public Location getLocation() {
