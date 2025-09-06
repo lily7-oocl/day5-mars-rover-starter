@@ -12,9 +12,9 @@ class MarRoverTest {
         Location location = new Location(0,0,"N");
         MarRover marRover = new MarRover(location);
         //When
-        Location currentLocation = marRover.executeCommand("M");
+        String currentLocation = marRover.executeCommand("M");
         //Then
-        assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
+        assertEquals(currentLocation,ExpectedLocation.respondLocation());
     }
     @Test
     public void should_move_when_executeCommand_given_M_and_direction_is_E() {
@@ -23,9 +23,9 @@ class MarRoverTest {
         Location location = new Location(0,0,"E");
         MarRover marRover = new MarRover(location);
         //When
-        Location currentLocation = marRover.executeCommand("M");
+        String currentLocation = marRover.executeCommand("M");
         //Then
-        assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
+        assertEquals(currentLocation,ExpectedLocation.respondLocation());
     }
     @Test
     public void should_move_when_executeCommand_given_M_and_direction_is_S() {
@@ -34,9 +34,9 @@ class MarRoverTest {
         Location location = new Location(0,0,"S");
         MarRover marRover = new MarRover(location);
         //When
-        Location currentLocation = marRover.executeCommand("M");
+        String currentLocation = marRover.executeCommand("M");
         //Then
-        assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
+        assertEquals(currentLocation,ExpectedLocation.respondLocation());
     }
     @Test
     public void should_move_when_executeCommand_given_M_and_direction_is_W() {
@@ -45,9 +45,9 @@ class MarRoverTest {
         Location location = new Location(0,0,"W");
         MarRover marRover = new MarRover(location);
         //When
-        Location currentLocation = marRover.executeCommand("M");
+        String currentLocation = marRover.executeCommand("M");
         //Then
-        assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
+        assertEquals(currentLocation,ExpectedLocation.respondLocation());
     }
     @Test
     public void should_move_when_executeCommand_given_L_and_direction_is_N() {
@@ -56,9 +56,9 @@ class MarRoverTest {
         Location location = new Location(0,0,"N");
         MarRover marRover = new MarRover(location);
         //When
-        Location currentLocation = marRover.executeCommand("M");
+        String currentLocation = marRover.executeCommand("M");
         //Then
-        assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
+        assertEquals(currentLocation,ExpectedLocation.respondLocation());
     }
     @Test
     public void should_move_when_executeCommand_given_L_and_direction_is_W() {
@@ -67,9 +67,9 @@ class MarRoverTest {
         Location location = new Location(0,0,"W");
         MarRover marRover = new MarRover(location);
         //When
-        Location currentLocation = marRover.executeCommand("M");
+        String currentLocation = marRover.executeCommand("M");
         //Then
-        assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
+        assertEquals(currentLocation,ExpectedLocation.respondLocation());
     }
     @Test
     public void should_move_when_executeCommand_given_L_and_direction_is_S() {
@@ -78,9 +78,9 @@ class MarRoverTest {
         Location location = new Location(0,0,"S");
         MarRover marRover = new MarRover(location);
         //When
-        Location currentLocation = marRover.executeCommand("M");
+        String currentLocation = marRover.executeCommand("M");
         //Then
-        assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
+        assertEquals(currentLocation,ExpectedLocation.respondLocation());
     }
     @Test
     public void should_move_when_executeCommand_given_L_and_direction_is_E() {
@@ -89,9 +89,9 @@ class MarRoverTest {
         Location location = new Location(0,0,"E");
         MarRover marRover = new MarRover(location);
         //When
-        Location currentLocation = marRover.executeCommand("M");
+        String currentLocation = marRover.executeCommand("M");
         //Then
-        assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
+        assertEquals(currentLocation,ExpectedLocation.respondLocation());
     }
     @Test
     public void should_move_when_executeCommand_given_R_and_direction_is_N() {
@@ -100,9 +100,9 @@ class MarRoverTest {
         Location location = new Location(0,0,"N");
         MarRover marRover = new MarRover(location);
         //When
-        Location currentLocation = marRover.executeCommand("M");
+        String currentLocation = marRover.executeCommand("M");
         //Then
-        assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
+        assertEquals(currentLocation,ExpectedLocation.respondLocation());
     }
     @Test
     public void should_move_when_executeCommand_given_R_and_direction_is_E() {
@@ -111,9 +111,9 @@ class MarRoverTest {
         Location location = new Location(0,0,"E");
         MarRover marRover = new MarRover(location);
         //When
-        Location currentLocation = marRover.executeCommand("M");
+        String currentLocation = marRover.executeCommand("M");
         //Then
-        assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
+        assertEquals(currentLocation,ExpectedLocation.respondLocation());
     }
     @Test
     public void should_move_when_executeCommand_given_R_and_direction_is_S() {
@@ -122,9 +122,9 @@ class MarRoverTest {
         Location location = new Location(0,0,"S");
         MarRover marRover = new MarRover(location);
         //When
-        Location currentLocation = marRover.executeCommand("M");
+        String currentLocation = marRover.executeCommand("M");
         //Then
-        assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
+        assertEquals(currentLocation,ExpectedLocation.respondLocation());
     }
     @Test
     public void should_move_when_executeCommand_given_R_and_direction_is_W() {
@@ -133,8 +133,8 @@ class MarRoverTest {
         Location location = new Location(0,0,"W");
         MarRover marRover = new MarRover(location);
         //When
-        Location currentLocation = marRover.executeCommand("M");
+        String currentLocation = marRover.executeCommand("M");
         //Then
-        assertEquals(currentLocation.respondLocation(),ExpectedLocation.respondLocation());
+        assertEquals(currentLocation,ExpectedLocation.respondLocation());
     }
 }
