@@ -62,11 +62,11 @@ public class MarRover {
     }
 
     public void turnLeft() {
-        location.getDirection().turnLeft();
+        location.setDirection(location.getDirection().turnLeft());
     }
 
     public void turnRight() {
-        location.getDirection().turnRight();
+        location.setDirection(location.getDirection().turnRight());
     }
 
     public Location getLocation() {
