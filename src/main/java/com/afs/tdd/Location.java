@@ -1,9 +1,5 @@
 package com.afs.tdd;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Location {
     private int locationX;
     private int locationY;
