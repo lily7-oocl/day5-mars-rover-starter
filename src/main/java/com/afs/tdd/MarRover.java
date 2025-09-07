@@ -1,4 +1,5 @@
 package com.afs.tdd;
+import java.util.Objects;
 
 public class MarRover {
     private final Location location;
@@ -8,22 +9,11 @@ public class MarRover {
     }
 
     public String executeCommand(String command) {
-        for (Character singleCommand:command.toCharArray()){
-            switch (singleCommand) {
-                case 'M':
-                    move();
-                    break;
-                case 'B':
-                    back();
-                    break;
-                case 'R':
-                    turnRight();
-                    break;
-                case 'L':
-                    turnLeft();
-                    break;
-            }
-        }
+        command.chars()
+                .mapToObj(c -> CommandType.fromChar((char) c))
+                .filter(Objects::nonNull)
+                .map(commandType -> commandType.createCommand(this))
+                .forEach(Command::execute);
         return location.respondLocation();
     }
 
@@ -67,9 +57,5 @@ public class MarRover {
 
     public void turnRight() {
         location.setDirection(location.getDirection().turnRight());
-    }
-
-    public Location getLocation() {
-        return location;
     }
 }
